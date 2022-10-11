@@ -18,6 +18,11 @@ body {
 	text-align: center;
 }
 
+div.playlist_table {
+	width: 100%; 
+	display: table;
+}
+
 #search_results {
 	overflow: auto;
 	width: 100%;

@@ -1,25 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Playlist from '../components/Playlist';
 
 export interface IAboutPageProps {}
 
-const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
-    const [message, setMessage] = useState('');
-    const { number } = useParams();
-
-    useEffect(() => {
-        if (number) {
-            setMessage('The number is ' + number);
-        } else {
-            setMessage('No number was provided');
-        }
-    }, []);
-
+const Jukebox: React.FunctionComponent<IAboutPageProps> = (props) => {
     return (
-        <div>
-            <p>Jukebox!</p>
-        </div>
+        <>
+            <div>
+                <Playlist />
+            </div>
+        </>
     );
 };
 
-export default AboutPage;
+export default Jukebox;

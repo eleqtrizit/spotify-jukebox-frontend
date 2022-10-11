@@ -9,3 +9,24 @@ export interface PartyId {
 export interface QueryString {
     query_string: string;
 }
+
+export interface Artist {
+    name: string;
+    uri: string;
+    id: string;
+}
+
+export interface Album {
+    name: string;
+    id: string;
+    uri: string;
+    image: string;
+}
+
+export interface Track {
+    name: string;
+    id: string;
+    uri: string;
+    artists: Artist[];
+    album: Album;
+}

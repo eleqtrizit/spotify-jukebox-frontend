@@ -6,13 +6,13 @@ interface TrackArtistsProps {
 
 const TrackArtists = ({ artists }: TrackArtistsProps) => {
     return (
-        <>
+        <span>
             {artists.map((artist) => (
-                <div className="artists" key={artist.id}>
-                    <div className="name">{artist.name}</div>
-                </div>
+                <span key={artist.id} className="artistName">
+                    {artist.name}
+                </span>
             ))}
-        </>
+        </span>
     );
 };
 

@@ -18,9 +18,41 @@ body {
 	text-align: center;
 }
 
-div.playlist_table {
+table, th, td {
+	border-collapse: collapse;
+  }
+
+
+
+.playlist_table {
 	width: 100%; 
-	display: table;
+	border-collapse: collapse;
+}
+
+.trackListing{
+	width: 100%;
+	border-collapse: collapse;
+	background: rgba(54, 54, 54, 0.5);
+}
+
+.track {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 16px;
+}
+
+.artistName{
+	font-size: 12px;
+}
+
+.albumImage{
+	width: 100px;
+}
+
+.album{
+	font-size: 12px;
+	font-style: italic;
+	vertical-align: text-top;
 }
 
 #search_results {

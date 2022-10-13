@@ -1,15 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Playlist from '../components/Playlist';
+import SearchComponent from '../components/SearchComponent';
 
-export interface IAboutPageProps {}
-
-const Jukebox: React.FunctionComponent<IAboutPageProps> = (props) => {
+const Jukebox = () => {
     return (
         <>
-            <div>
-                <Playlist />
+            <div className="searchBar">
+                <div className="flexbox">
+                    <div className="searchDummy">
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="       ..."
+                                required
+                                onClick={(e) => (window.location.href = '/search')}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
+            <Playlist />
         </>
     );
 };

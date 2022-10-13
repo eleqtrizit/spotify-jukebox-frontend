@@ -4,8 +4,15 @@
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Launch Edge against localhost",
+            "name": "Jukebox",
             "url": "http://localhost:3000/jukebox",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Search",
+            "url": "http://localhost:3000/search/",
             "webRoot": "${workspaceFolder}"
         }
     ]

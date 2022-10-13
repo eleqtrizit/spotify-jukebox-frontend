@@ -14,6 +14,7 @@ export interface Artist {
     name: string;
     uri: string;
     id: string;
+    image: string;
 }
 
 export interface Album {

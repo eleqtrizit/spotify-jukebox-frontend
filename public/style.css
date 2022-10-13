@@ -39,6 +39,10 @@ table, th, td {
 	background: rgba(54, 54, 54, 0.5);
 }
 
+.clickable {
+	cursor: pointer
+}
+
 .track {
 	font-size: 16px;
 	font-weight: bold;
@@ -49,8 +53,23 @@ table, th, td {
 	font-size: 12px;
 }
 
+.artistNameLarge{
+	font-size: 18px;
+}
+
+.artistNameSmall{
+	font-size: 10px;
+}
+
 .albumImage{
 	width: 100px;
+}
+
+.artistBg{
+	background-image: url('/band.jpg');
+	width: 150px;
+	height: 150px;
+	background-size: cover;    
 }
 
 .album{
@@ -76,20 +95,23 @@ table, th, td {
 }
 
 .artistListing{
-	font-size: 16px;
+	font-size: 18px;;
 	font-weight: bold;
 	padding-bottom: 10px;
 	text-align: center;
 	grid-template-columns: repeat(4, 1fr);
 	/* this is the same as grid-template-rows: 300px 300px; */
 	grid-template-rows: 200px 200px;
+	height: 200px;
 	/* grid-template-rows: repeat(1, 150px); */
 }
 
 .gridWrapper {
+	width: auto;
 	display: grid;
 	align-items: center;
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	background: rgba(54, 54, 54, 0.5);
 }
 
 .searchTitle{
@@ -105,4 +127,10 @@ table, th, td {
 .searchPadding {
 	width: 100%;
 	height: 50px;
+	display: inline-block
 }
+
+.resultSet{
+	width: 100%;
+}
+

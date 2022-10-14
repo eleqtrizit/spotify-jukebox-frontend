@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Dispatch, useEffect, useRef, useState } from 'react';
+import { Dispatch, useEffect, useState } from 'react';
 import { Track } from './model';
 import TrackListing from './TrackListing';
 

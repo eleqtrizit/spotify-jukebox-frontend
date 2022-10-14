@@ -29,5 +29,5 @@ export interface Track {
     id: string;
     uri: string;
     artists: Artist[];
-    album: Album;
+    album?: Album;
 }

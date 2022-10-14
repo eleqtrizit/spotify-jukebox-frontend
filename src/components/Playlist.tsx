@@ -17,8 +17,6 @@ const getPlaylist = async (setTracks: Dispatch<React.SetStateAction<Track[]>>) =
 };
 
 const Playlist = () => {
-    const [serverMessage, setServerMessage] = useState('');
-    const [webSocketReady, setWebSocketReady] = useState(false);
     const [tracks, setTracks] = useState<Track[]>([]);
 
     useEffect(() => {

@@ -11,15 +11,17 @@ const TrackListing = ({ tracks }: Tracks) => {
             <tbody>
                 {tracks.map((track) => (
                     <tr className="trackListing" key={track.id}>
-                        <td className="albumImage">
-                            <img src={track.album.image} alt="album art" width="75" height="75" />
-                        </td>
+                        {track.album ? (
+                            <td className="albumImage">
+                                <img src={track.album.image} alt="album art" width="75" height="75" />
+                            </td>
+                        ) : null}
                         <td className="track">
                             {track.name}
                             <br />
                             <TrackArtists artists={track.artists} />
                             <br />
-                            <span className="album">{track.album.name}</span>
+                            {track.album ? <span className="album">{track.album.name}</span> : null}
                         </td>
                     </tr>
                 ))}

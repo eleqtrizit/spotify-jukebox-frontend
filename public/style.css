@@ -65,6 +65,10 @@ table, th, td {
 	width: 100px;
 }
 
+.imageCenter{
+	text-align: center;
+}
+
 .artistBg{
 	background-image: url('/band.jpg');
 	width: 150px;

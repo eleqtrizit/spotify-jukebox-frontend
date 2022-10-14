@@ -10,14 +10,16 @@ const Playlist = () => {
     const [tracks, setTracks] = useState<Track[]>([]);
 
     useEffect(() => {
-        let webSocket = new WebSocket('ws://127.0.0.1:8000/ws_playlist_tracks/' + localStorage.party_id);
+        let webSocket = new WebSocket(`${process.env.REACT_APP_WS_URL}/${localStorage.party_id}`);
 
         if (window.performance) {
             if (performance.navigation.type === 1) {
                 console.log('This page is reloaded');
                 webSocket.close();
                 setWebSocketReady(false);
-                webSocket = new WebSocket('ws://127.0.0.1:8000/ws_playlist_tracks/' + localStorage.party_id);
+                webSocket = new WebSocket(
+                    `${process.env.REACT_APP_WS_URL}/ws_playlist_tracks/${localStorage.party_id}`
+                );
                 setWebSocketReady(true);
             }
         }
@@ -47,7 +49,7 @@ const Playlist = () => {
             console.log('Socket encountered error');
             setWebSocketReady(false);
             webSocket.close();
-            webSocket = new WebSocket('ws://127.0.0.1:8000/ws_playlist_tracks/' + localStorage.party_id);
+            webSocket = new WebSocket(`${process.env.REACT_APP_WS_URL}/ws_playlist_tracks/${localStorage.party_id}`);
             setWebSocketReady(true);
         };
 

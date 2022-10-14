@@ -5,11 +5,11 @@ var codes: { [code: string]: boolean } = {};
 
 const ForwardCallback = (code: string | null) => {
     const callback = async () => {
-        const res = await axios.get(`http://localhost:8000/callback?code=${code}`);
+        const res = await axios.get(`{process.env.REACT_APP_SERVER_URL}/callback?code=${code}`);
         const resData = res.data as PartyId;
         console.log(resData.party_id);
         localStorage.setItem('party_id', resData.party_id);
-        window.location.href = 'http://localhost:3000/jukebox';
+        window.location.href = process.env.REACT_APP_CALLBACK + '/jukebox';
     };
     if (code && !(code in codes)) {
         codes[code] = true;

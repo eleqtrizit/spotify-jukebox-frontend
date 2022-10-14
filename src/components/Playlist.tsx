@@ -4,8 +4,7 @@ import { Track } from './model';
 import TrackListing from './TrackListing';
 
 const getPlaylist = async (setTracks: Dispatch<React.SetStateAction<Track[]>>) => {
-    const partyId = localStorage.getItem('party_id');
-    let url: string = `http://localhost:8000/playlist_tracks/${partyId}`;
+    let url: string = `${process.env.REACT_APP_WS_URL}/ws_playlist_tracks/${localStorage.party_id}`;
     try {
         console.log('getting playlist');
         axios.get(url).then((res) => {

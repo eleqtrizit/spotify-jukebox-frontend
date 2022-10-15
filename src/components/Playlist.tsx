@@ -4,7 +4,7 @@ import { Track } from './model';
 import TrackListing from './TrackListing';
 
 const getPlaylist = async (setTracks: Dispatch<React.SetStateAction<Track[]>>) => {
-    let url: string = `${process.env.REACT_APP_WS_URL}/ws_playlist_tracks/${localStorage.party_id}`;
+    let url: string = `${process.env.REACT_APP_SERVER_URL}/playlist_tracks/${localStorage.party_id}`;
     try {
         console.log('getting playlist');
         axios.get(url).then((res) => {
@@ -27,7 +27,6 @@ const Playlist = () => {
 
     return (
         <>
-            <h1>Jukebox</h1>
             <TrackListing tracks={tracks} />
         </>
     );

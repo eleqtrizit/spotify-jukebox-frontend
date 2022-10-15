@@ -14,6 +14,22 @@ body {
 	color: white;
 }
 
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
 .page{
 	margin: 10px;
 }
@@ -25,8 +41,6 @@ body {
 table, th, td {
 	border-collapse: collapse;
   }
-
-
 
 .playlist_table {
 	width: 100%; 
@@ -138,3 +152,66 @@ table, th, td {
 	width: 100%;
 }
 
+.failText{
+	position: fixed; /* or absolute */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 25vmin;
+	color:rgba(255, 0, 179, 0.558);
+	font-weight: 1000;
+	text-align: center;
+}
+
+.qrWrapper {
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+.qrWrapperSmall {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	width: 100px;
+	padding-bottom: 30px;
+}
+
+.qrCode, .qrCodeSmall, .qrCodeLarge {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.qrCodeSmall {
+	width: 60px
+}
+
+.qrCodeLarge {
+	width: 75vmin;
+}
+
+
+.qrText {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.backText {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.backText a {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.hidden {
+	visibility: hidden;
+	display: none;
+}

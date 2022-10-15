@@ -66,14 +66,12 @@ const Playlist = () => {
         if (tracks.length === 0) {
             return (
                 <div>
-                    <h1>Jukebox</h1>
                     <h2>Playlist is empty</h2>
                 </div>
             );
         } else {
             return (
                 <>
-                    <h1>Jukebox</h1>
                     <TrackListing tracks={tracks} />
                 </>
             );

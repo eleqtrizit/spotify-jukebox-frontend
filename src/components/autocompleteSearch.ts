@@ -5,7 +5,7 @@ var cancel: Canceler;
 
 export async function autocompleteSearch(searchQuery: string) {
     const partyId = localStorage.getItem('party_id');
-    const url: string = process.env.REACT_APP_SERVER_URL + '/search/' + searchQuery + '/' + partyId;
+    const url: string = `${process.env.REACT_APP_SERVER_URL}/search/${searchQuery}/${partyId}`;
     if (cancel !== undefined) {
         cancel();
     }

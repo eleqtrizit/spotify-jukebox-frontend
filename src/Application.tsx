@@ -6,6 +6,7 @@ import HomePage from './pages/Home';
 import Jukebox from './pages/Jukebox';
 import Search from './pages/Search';
 import Share from './pages/Share';
+import InvalidParty from './pages/InvalidParty';
 
 export interface IApplicationProps {}
 
@@ -22,6 +23,7 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
                     <Route path="share" element={<Share />} />
                     <Route path="join" element={<Join />} />
                     <Route path="join/:partyId" element={<Join />} />
+                    <Route path="invalid" element={<InvalidParty />} />
                 </Routes>
             </BrowserRouter>
         </div>

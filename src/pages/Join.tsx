@@ -10,18 +10,21 @@ const Join = () => {
     let idIsValid = false;
     if (partyId) {
         const url = `${process.env.REACT_APP_SERVER_URL}/check/${partyId}`;
-        axios.get(url).then(() => {
-            localStorage.setItem('party_id', partyId ? partyId : '');
-            idIsValid = true;
-            window.location.href = '/jukebox';
+        axios.get(url).then((res) => {
+            if (res.data.valid) {
+                localStorage.setItem('party_id', partyId ? partyId : '');
+                idIsValid = true;
+            }
+            console.log(idIsValid);
+
+            if (idIsValid) {
+                window.location.href = '/jukebox/' + partyId;
+            } else {
+                window.location.href = '/invalid';
+            }
         });
-    }
-    if (!idIsValid) {
-        return (
-            <>
-                <div className="failText">INVALID PARTY ID</div>
-            </>
-        );
+    } else {
+        window.location.href = '/invalid';
     }
     return <></>;
 };

@@ -13,7 +13,7 @@ const TrackArtists = ({ artists, artistNameClass }: TrackArtistsProps) => {
         <span>
             {artists.map((artist) => (
                 <span key={artist.id} className={artistNameClass}>
-                    {artist.name}
+                    {artist.name} {artist !== artists[artists.length - 1] ? ', ' : ''}
                 </span>
             ))}
         </span>

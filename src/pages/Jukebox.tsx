@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import QRCode from 'react-qr-code';
 import { useParams } from 'react-router-dom';
 import isValidPartyId from '../components/isValidPartyId';

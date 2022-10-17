@@ -6,7 +6,7 @@ const Callback = () => {
     const code = searchParams.get('code');
     ForwardCallback(code);
 
-    return <div></div>;
+    return <div>Attempting to start a party...</div>;
 };
 
 export default Callback;

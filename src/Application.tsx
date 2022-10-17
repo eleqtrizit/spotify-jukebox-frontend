@@ -15,7 +15,7 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="callback" element={<Callback />} />
+                    <Route path="callback_after" element={<Callback />} />
                     <Route path="jukebox" element={<Jukebox />} />
                     <Route path="jukebox/:partyId" element={<Jukebox />} />
                     <Route path="search" element={<Search />} />

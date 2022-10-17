@@ -9,7 +9,6 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
     function goToAuth() {
         auth_url().then((url) => {
             url.auth_url = url.auth_url.replace('8000', '3000');
-            // console.log(url.auth_url);
             window.location.href = url.auth_url;
         });
     }

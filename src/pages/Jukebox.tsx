@@ -33,7 +33,7 @@ const Jukebox = () => {
                                 type="text"
                                 placeholder="       ..."
                                 required
-                                onClick={(e) => (window.location.href = '/search')}
+                                onClick={(e) => (window.location.href = '/find')}
                             />
                         </div>
                     </div>

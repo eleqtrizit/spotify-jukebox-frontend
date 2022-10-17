@@ -18,7 +18,7 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
                     <Route path="exec_callback" element={<Callback />} />
                     <Route path="jukebox" element={<Jukebox />} />
                     <Route path="jukebox/:partyId" element={<Jukebox />} />
-                    <Route path="search" element={<Search />} />
+                    <Route path="find" element={<Search />} />
                     <Route path="share" element={<Share />} />
                     <Route path="join" element={<Join />} />
                     <Route path="join/:partyId" element={<Join />} />

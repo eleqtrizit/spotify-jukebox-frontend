@@ -168,6 +168,13 @@ table, th, td {
 	padding-bottom: 30px;
 }
 
+.cancelWrapper {
+	position: absolute;
+	right: -130px;
+	width: 100px;
+	padding-bottom: 30px;
+}
+
 .qrWrapperSmall {
 	position: absolute;
 	top: 30px;

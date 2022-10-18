@@ -40,6 +40,10 @@ const SearchComponent = () => {
         setTracks([]);
     };
 
+    const backToJukebox = () => {
+        window.location.href = `/jukebox/${localStorage.party_id}`;
+    };
+
     const albumTracks = async (albumId: string, albumImg: string) => {
         setImageCover(albumImg);
         clearSearchResults();
@@ -60,13 +64,13 @@ const SearchComponent = () => {
     };
 
     const addTrack = async (trackId: string) => {
+        const partyId = localStorage.getItem('party_id');
         try {
-            const partyId = localStorage.getItem('party_id');
-            const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/add/${trackId}/${partyId}`);
+            await axios.get(`${process.env.REACT_APP_SERVER_URL}/add/${trackId}/${partyId}`);
         } catch (error) {
             console.log(error);
         }
-        window.location.href = '/jukebox';
+        window.location.href = `/jukebox/${partyId}`;
     };
 
     const listTracks = (tracks: Track[]) => {
@@ -74,7 +78,6 @@ const SearchComponent = () => {
             return (
                 <div>
                     <div className="searchTitle">Tracks</div>
-
                     <table className="playlist_table">
                         <tbody>
                             {tracks.map((track) => (
@@ -172,6 +175,9 @@ const SearchComponent = () => {
                                 required
                                 onChange={(e) => executeSearch(e.target.value)}
                             />
+                            <span className="cancelWrapper" onClick={() => backToJukebox()}>
+                                <img src="whitecancel.png" alt="cancel" width="40" />
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -152,7 +152,7 @@ table, th, td {
 	width: 100%;
 }
 
-.failText{
+.failText, .startParty{
 	position: fixed; /* or absolute */
 	top: 50%;
 	left: 50%;

@@ -16,7 +16,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
     return (
         <>
             <div className="logo clickable" onClick={() => goToAuth()}>
-                <span className="startParty">START JUKEBOX</span>
+                <span className="startParty">START JUKE BOX</span>
             </div>
             {/* <div>
                 <button onClick={() => navigate('/layout/55')}>Go to layout, with a number</button>

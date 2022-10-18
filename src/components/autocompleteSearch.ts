@@ -18,6 +18,5 @@ export async function autocompleteSearch(searchQuery: string) {
         return response.data;
     } catch (error) {
         console.log('Previous request cancelled');
-        // console.log(error);
     }
 }

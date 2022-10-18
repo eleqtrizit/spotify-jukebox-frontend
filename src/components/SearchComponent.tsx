@@ -63,8 +63,6 @@ const SearchComponent = () => {
         try {
             const partyId = localStorage.getItem('party_id');
             const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/add/${trackId}/${partyId}`);
-            console.log(res);
-            // alert(res.data.message);
         } catch (error) {
             console.log(error);
         }

@@ -6,7 +6,17 @@ const Callback = () => {
     const code = searchParams.get('code');
     ForwardCallback(code);
 
-    return <div>Attempting to start a party...</div>;
+    return (
+        <>
+            <div className="dancingWrapper">
+                <div className="dancing">
+                    <img src="dancing.webp" alt="Dancing" />
+                    <br />
+                    <span className="dancingText">STARTING PARTY</span>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default Callback;

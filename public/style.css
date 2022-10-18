@@ -197,6 +197,36 @@ table, th, td {
 	width: 75vmin;
 }
 
+.dancingWrapper {
+	width: 100%;
+	display: block;
+
+}
+
+.dancing {
+	width: 75vmin;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dancingText {
+	font-size: 10vmin;
+	color:rgba(255, 0, 179, 0.558);
+	font-weight: 1000;
+	animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+  }
+
+.dancing img{
+	width: 75vmin;
+}
+
 
 .qrText {
 	font-size: 40px;

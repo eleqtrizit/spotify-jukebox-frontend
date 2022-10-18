@@ -18,6 +18,10 @@ You can see the playlist created inside the Premium user's Spotify, named someth
 
 The UI is optimized for small screens, as that is the most likely use-case (unless you're at a [LAN Party](https://www.bing.com/images/search?q=lan+party&first=1&cw=1389&ch=943&tsc=ImageHoverTitle), I guess). It displays OK on a regular screen, too.
 
+## Try It!
+
+[Spotify Jukebox](https://jukebox.rivera-web.com)
+
 ## Backend
 
 [https://github.com/eleqtrizit/spotify-jukebox-backend](https://github.com/eleqtrizit/spotify-jukebox-backend)

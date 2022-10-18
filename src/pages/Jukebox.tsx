@@ -9,16 +9,14 @@ interface PartyProps {
 }
 
 const Jukebox = () => {
-    const { partyId }: PartyProps = useParams();
+    let { partyId }: PartyProps = useParams();
 
     useEffect(() => {
-        if (!partyId && localStorage.party_id) {
-            window.location.href = `/jukebox/${localStorage.party_id}`;
-        }
         isValidPartyId(partyId || 'badId').then((res) => {
-            if (res) {
+            if (!res) {
+                window.location.href = `/join/${partyId || localStorage.party_id}`;
             } else {
-                window.location.href = `/join/${localStorage.party_id}`;
+                localStorage.party_id = partyId;
             }
         });
     }, [partyId]);

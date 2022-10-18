@@ -12,6 +12,10 @@ const Jukebox = () => {
     let { partyId }: PartyProps = useParams();
 
     useEffect(() => {
+        if (partyId && !(partyId in localStorage)) {
+            window.location.href = `/join/${partyId || localStorage.party_id}`;
+        }
+
         isValidPartyId(partyId || 'badId').then((res) => {
             if (!res) {
                 window.location.href = `/join/${partyId || localStorage.party_id}`;

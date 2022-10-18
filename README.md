@@ -22,6 +22,10 @@ The UI is optimized for small screens, as that is the most likely use-case (unle
 
 [Spotify Jukebox](https://jukebox.rivera-web.com)
 
+## Help
+
+I need a better name for this project. Something cool. If you have a good idea, shoot me a message.
+
 ## Backend
 
 [https://github.com/eleqtrizit/spotify-jukebox-backend](https://github.com/eleqtrizit/spotify-jukebox-backend)
